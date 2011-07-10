@@ -1,0 +1,15 @@
+This script will setup public key authentication for a remote SSH host that
+you currently have password access to.  The advantage to this somewhat complex
+method is that it only requires entering the password once to perform all the
+necessary operations.  When complete, it will then log you in so you can poke
+around.
+
+It support two modes, for example:
+
+  sshify root@192.168.217.132
+
+If I also want to automagically add an alias to ~/.ssh/config for this host:
+
+  sshify root@192.168.217.132 centos
+
+Later I can just 'ssh centos', and no passwords will be needed!
