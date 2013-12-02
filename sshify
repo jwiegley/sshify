@@ -117,8 +117,8 @@ Possible reasons are:
   4. The remote user has no shell.
   5. The remote user's home directory is on a stale NFS mount.
 
-The best way to research these program is to run the following on the
-server:
+The best way to research these problems is to run the following on
+the server:
 
   # sshd -d -d -d -p 6060
 
