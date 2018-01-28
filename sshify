@@ -46,7 +46,8 @@ alias=$2
 
 CONTROL="-o ControlPath=$HOME/.ssh/master-%r@%h:%p"
 
-ssh $SSH_OPTS $CONTROL -MNf $host
+ssh -o PreferredAuthentications=password \
+    $SSH_OPTS $CONTROL -MNf $host
 ssh $SSH_OPTS $CONTROL -O check $host
 
 # Prepare the file ~/.ssh/authorized_keys
